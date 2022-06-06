@@ -1,3 +1,5 @@
+import numpy as np
+import random
 from bokeh.io import output_file, show
 from bokeh.plotting import figure
 
@@ -66,3 +68,36 @@ plot3.circle(xplot,yplot, size = 30, alpha = 0.5)
 output_file('scatter.html')
 
 show(plot3)
+
+# -----------------------------------
+#creating line plots using numPy arrays
+
+#creating an array of points long the x and y axes
+array_x = np.array([1,2,3,4,5,6])
+array_y = np.array([5,6,7,8,9,10])
+
+#creating a line plot
+plot_array_line = figure()
+plot_array_line.line(array_x, array_y)
+
+output_file('numpy_line.html')
+
+show(plot_array_line)
+
+#--------------------------------------------
+
+#creating arrays for two different categories of points
+x_red = np.array([1,2,3,4,5])
+y_red = np.array([5,6,7,8,9])
+
+x_blue = np.array([10,11,12,13])
+y_blue = np.array([14,15,16,17])
+
+#creating the categorical scatter plot
+plot_category = figure()
+plot_category.circle(x_red, y_red, size=9, color='red', alpha=0.8)
+plot_category.circle(x_blue, y_blue, size=9, color='blue', alpha=0.8)
+
+output_file('numpy_scatter.html')
+
+show(plot_category)
