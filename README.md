@@ -39,4 +39,4 @@ show(p)
 
 Please do the following to launch app locally:
 Run in terminal the following: 
-```bokeh server --show {filename}.py```
+```bokeh serve --show {filename}.py```
