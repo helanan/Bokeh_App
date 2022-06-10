@@ -22,3 +22,19 @@ plot.line(x = df_apple['date'], y = df_apple['high'])
 output_file('pandas_time.html')
 
 show(plot)
+#----------------------------Scatter Plot with Pandas---------------
+
+#create the scatter plot
+
+plot_scatter = figure()
+
+plot_scatter.circle(x = df_apple['high'], y = df_apple['low'], color = 'red', size = 10, alpha = 0.8)
+
+plot_scatter.diamond(x = df_apple['open'], y = df_apple['close'], color = 'green', size = 10, alpha = 0.8)
+
+#Output the plot
+
+output_file('pandas_scatter.html')
+show(plot_scatter)
+
+#----------------Plotting with ColumnDataSource--------------
