@@ -35,7 +35,8 @@ p.line(x,y)
 
 show(p)
 ```
-
+Make sure to create a new virtual environment, for example:
+conda activate bokeh_app
 
 Please do the following to launch app locally:
 Run in terminal the following: 
